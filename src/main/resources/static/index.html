@@ -2,11 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CI/CD 자동화</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
 </head>
 <body>
+<h1>CI/CD 자동화 시스템</h1>
 
+<h4 class="resultPlace">API Health Check Start :: Calling API => [localhost:8080/health/check]</h4>
 
+<button onclick="checkHealth()">Health Check</button>
+
+<script>
+
+    const setResult = document.querySelector(".resultPlace");
+    const checkHealth = () => {
+        console.log("This is work haha!!")
+        axios.get("/health/check").then((d) => {
+            console.log(d.status)
+            console.log(d.data)
+            setResult.innerText += `\n ${d.data} ===> [API STATUS CODE] : ${d.status}`
+
+        })
+    }
+</script>
 </body>
-
 </html>
