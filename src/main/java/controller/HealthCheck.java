@@ -3,8 +3,10 @@ package controller;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.Status;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+@RestController
 public class HealthCheck {
 
     private static final String HEALTH_ENDPOINT_URL = "http://localhost:8080/actuator/health"; // Actuator health 엔드포인트 URL
