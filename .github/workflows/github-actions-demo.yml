@@ -24,8 +24,8 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: Build, tag, and push image to Amazon ECR
+      - name: Build, tag, and push image to Amazon ECRㄴ
         run: |
           docker build -t note9999 .
-          docker tag note9999:latest 097574199557.dkr.ecr.us-east-2.amazonaws.com/note9999:latest
-          docker push 097574199557.dkr.ecr.us-east-2.amazonaws.com/note9999:latest
+          docker tag note9999:latest 097574199557.dkr.ecr.us-east-2.amazons.com/note9999:latest
+          docker push 097574199557.dkr.ecr.us-east-2.amazons.com/note9999:latest
