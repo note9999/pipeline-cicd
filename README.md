@@ -1,0 +1,5 @@
+- Java + Springboot 환경의 프로젝트 입니다.
+- Dockerfile : multi-stage 를 이용해 dev 환경과 prod 환경 빌드를 `target` 을 통해 지정가능
+- docker-compose : `dev` 환경을 바라보고 빌드하고 애플리케이션을 실행
+- .github/workflows : 총 3가지 파이프라인이 준비되어 있습니다.
+- .taskdefinition : 환경에 따라 여러가지 task-definition 을 만들었습니다.
